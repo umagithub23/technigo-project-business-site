@@ -1,5 +1,217 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: blue;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+/* ---- Header ---- */
+
+header {
+  width: 100%;
+  height: 250px;
+  background-image: url("./assets/nature.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 70px;
+  color: #ffff66;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* ---- Form section ---- */
+
+section.form-container {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+  background: #F4E7D3;
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  background: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+}
+
+fieldset {
+  padding: 20px;
+  border: 2px solid #E8C9A1;
+  border-radius: 6px;
+  transition: border 0.2s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+fieldset:hover {
+  border-color: #CFA97F;
+}
+
+legend {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #084C61;
+}
+
+/* MOBILE-FIRST: fields stacked */
+.wrapper-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Label + input styling */
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+label span {
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: #084C61;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #CFA97F;
+  border-radius: 4px;
+  background: #FFFFFF;
+}
+
+/* Checkbox row */
+.wrapper-row {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Submit button */
+button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: #0E6B6C;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3DBEC4;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #E8C9A1;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.checkbox-container:hover input~.custom-checkbox {
+  background-color: #ccc;
+}
+
+.checkbox-container input:checked~.custom-checkbox {
+  background-color: #0E6B6C;
+}
+
+.custom-checkbox:after {
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 3px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  top: 5px;
+  left: 7px;
+  transform: rotate(45deg);
+  display: none;
+}
+
+.checkbox-container input:checked~.custom-checkbox:after {
+  display: block;
+}
+
+.checkbox-container input:focus+.custom-checkbox {
+  outline: #333 auto 4px;
+}
+
+/* ---------------- RESPONSIVE BREAKPOINTS ---------------- */
+
+/* Tablet: two columns for labels + inputs */
+@media (min-width: 600px) {
+  .wrapper-col {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem 1.5rem;
+  }
+
+  label {
+    flex-direction: column;
+  }
+}
+
+/* Desktop: slightly larger header + form spacing */
+@media (min-width: 900px) {
+  header {
+    height: 350px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  section.form-container {
+    padding: 3rem;
+  }
+}
+
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #084C61;
+  background: #f7c48b;
 }

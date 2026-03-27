@@ -1,17 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- Don't forget to link the CSS file here! -->
-  </head>
-  <body>
-    <h1>Business name 🌻</h1>
 
-    <!-- Video or image as a header is cool :) -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project-Business-Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+  <header>
+    <h1>The Food Edit</h1>
+  </header>
+
+  <section class="form-container">
     <!-- Signup form -->
+    <form action="http://httpbin.org/anything" method="post">
+      <fieldset>
+        <legend>Time to Sign Up ✍️</legend>
 
-  </body>
+        <div class="wrapper-col">
+          <label>
+            <span>First Name</span>
+            <input type="text" name="fname" placeholder="ex: Jenny">
+          </label>
+
+          <label>
+            <span>Last Name</span>
+            <input type="text" name="lname" placeholder="ex: Rosen">
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="ex: jenny@example.com">
+          </label>
+
+          <label>
+            <span>Contact</span>
+            <input type="tel" name="contact" placeholder="ex: 077 777 7777" pattern="[0-9]*" inputmode="numeric">
+          </label>
+
+          <label>
+            <span>Password</span>
+            <input type="password" name="password">
+          </label>
+        </div>
+
+
+        <div class="wrapper-row">
+          <label class="checkbox-container">Subscribe to the news letter!
+            <input type="checkbox" checked>
+            <span class="custom-checkbox"></span>
+          </label>
+        </div>
+
+        <button type="submit">Submit</button>
+
+      </fieldset>
+    </form>
+  </section>
+
+  <footer>
+    <span class="footer-span">
+      <p class="footer-text">@ This site is protected and the Privacy Policy and Terms of Service apply.</p>
+    </span>
+  </footer>
+
+</body>
+
 </html>
