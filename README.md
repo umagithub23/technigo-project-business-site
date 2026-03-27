@@ -8,4 +8,4 @@ Replace this readme with your own information about the project. You can include
 - To add scripts for toggle password, try to add videos instead of images.
 
 ## View it live
-- 
+- https://technigo-project-business-site-9ub.pages.dev/
